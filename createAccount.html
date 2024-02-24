@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="website icon" type="png" href="images/logo.png" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-white sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="images/logo.png" style="height: 200px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inventory.html">My Inventory</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            My Account
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="signin.html">Sign-In</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="createAccount.html">Create an Account</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Search">
+                    <button class="btn btn-primary" type="button">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <section class="h-100">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col">
+                    <div class="card card-creation my-4">
+                        <div class="row g-0">
+                            <div class="col-xl-6 d-none d-xl-block">
+                                <img src="images/CA.jpg" class="img-fluid"
+                                    style=" height: 420px; width:72%; margin-left: 85px; margin-top: 100px;" />
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="card-body p-md-5 text-black">
+                                    <h3 class="mb-5 text-uppercase">Create Account</h3>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="text" class="form-control form-control-lg"
+                                                    placeholder="First name" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="text" class="form-control form-control-lg"
+                                                    placeholder="Last name" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <input type="email" id="email" class="form-control form-control-lg"
+                                            placeholder="Email" />
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <input type="password" class="form-control form-control-lg"
+                                            placeholder="Password" />
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <input type="text" class="form-control form-control-lg"
+                                            placeholder="Confirm Password" />
+                                    </div>
+                                    <div class="justify-content-start ">
+                                        <button type="button" class="btn btn-primary btn-lg ms-2">Create
+                                            account</button><br><br>
+                                        <p><b>Already have an account?</b><a href="signin.html" class="link-danger">
+                                                Sign in</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
