@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign In</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="website icon" type="png" href="images/logo.png" />
+
+        <style>
+            #btn-back-to-top {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                display: none;
+            }
+        </style>
+    </head>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-white sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="images/logo.png" style="height: 200px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inventory.html">My Inventory</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="suggestions.html">Suggestions</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            My Account
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="signin.html">Sign-In</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="createAccount.html">Create an Account</a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Search">
+                    <button class="btn btn-primary" type="button">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+        <i>Scroll up</i>
+    </button>
+
+    <script>
+        //Get the button
+        let mybutton = document.getElementById("btn-back-to-top");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.addEventListener("click", backToTop);
+
+        function backToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+
+    <div class="container px-4 py-5" id="hanging-icons">
+        <h2 class="pb-2 border-bottom">Select your current season:</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
+            <div class="col d-flex align-items-start">
+                <div
+                    class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                    <img src="../beta-main/images/spring-icon.png" alt="" height="40px">
+                </div>
+                <div>
+                    <h3 class="fs-2 text-body-emphasis">Spring</h3>
+                    <p>Planting tips, seed selection, pest control for early growth it's the busiest time of year</p>
+                    <a href="#spring" class="btn btn-primary">
+                        View
+                    </a>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div
+                    class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                    <img src="../beta-main/images/summer-icon.png" alt="" height="40px">
+                </div>
+                <div>
+                    <h3 class="fs-2 text-body-emphasis">Summer</h3>
+                    <p>Watering strategies, weed management, maximizing crop yield.</p>
+                    <a href="#summer" class="btn btn-primary">
+                        View
+                    </a>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div
+                    class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                    <img src="../beta-main/images/fall-icon.png" alt="" height="40px">
+                </div>
+                <div>
+                    <h3 class="fs-2 text-body-emphasis">Fall</h3>
+                    <p>Harvesting techniques, crop storage solutions, preparing for winter.</p>
+                    <a href="#fall" class="btn btn-primary">
+                        View
+                    </a>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div
+                    class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                    <img src="../beta-main/images/winter-icon.png" alt="" height="40px">
+                </div>
+                <div>
+                    <h3 class="fs-2 text-body-emphasis">Winter</h3>
+                    <p>Soil maintenance, planning for next season, equipment repair and maintenance.</p>
+                    <a href="#winter" class="btn btn-primary">
+                        View
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <section id="spring" name="spring">
+
+        <div class="container mt-5">
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center
+                justify-content-center fs-4 flex-shrink-0 me-3">
+                <h1>Spring</h1>
+                <img src="../beta-main/images/spring-icon.png" alt="" height="60px">
+            </div>
+
+            <p>Welcome, farmers! This section provides helpful tips and resources for optimizing your farm throughout
+                the
+                year. Here's a specific focus on spring activities.</p>
+
+            <section class="mb-5">
+                <h2>Spring: Key Tasks and Activities</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Prepare soil: Test pH, amend if needed, till or cultivate beds.</li>
+                    <li class="list-group-item">Planting: Sow seeds directly or start seedlings indoors for
+                        transplanting.</li>
+                    <li class="list-group-item">Fertilize and compost: Apply amendments based on soil test results and
+                        crop needs.</li>
+                    <li class="list-group-item">Weed control: Manage weeds through hand-pulling, mulching, or organic
+                        methods.</li>
+                    <li class="list-group-item">Pest and disease monitoring: Regularly inspect plants and take
+                        appropriate action.</li>
+                    <li class="list-group-item">Irrigation: Monitor soil moisture and water deeply and regularly.</li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h2>Helpful Tips and Tricks</h2>
+                <ul>
+                    <li>Plan ahead: Choose the right planting dates for your region and specific crops.</li>
+                    <li>Group similar plants: Group plants with similar water needs together for efficient watering.
+                    </li>
+                    <li>Mulch around plants: Apply mulch to retain moisture, suppress weeds, and regulate soil
+                        temperature.</li>
+                    <li>Start seedlings indoors: Get a head start on the season by starting seeds indoors for later
+                        transplanting.</li>
+                    <li>Use organic methods whenever possible: Opt for natural pest control and disease management
+                        solutions.</li>
+                    <li>Keep detailed records: Track planting dates, crop yields, and any pest or disease issues for
+                        future reference.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Resource Links</h2>
+                <ul>
+                    <li><a href="https://www.almanac.com/gardening/planting-calendar">USDA Planting Calendar</a></li>
+                    <li><a href="https://www.nifa.usda.gov/">Cooperative Extension Service</a></li>
+                    <li><a
+                            href="https://www.epa.gov/pesticide-labels/labeling-pesticide-products-under-national-organic-program">Organic
+                            Gardening Tips</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+
+    </section>
+
+    <hr>
+
+    <section id="summer" name="summer">
+
+        <div class="container mt-5">
+            <div
+                class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                <h1>Summer</h1>
+                <img src="../beta-main/images/summer-icon.png" alt="" height="60px">
+            </div>
+
+            <p>Welcome, farmers! This section provides helpful tips and resources for optimizing your farm throughout
+                the
+                year. Here's a specific focus on summer activities.</p>
+
+            <section class="mb-5">
+                <h2>Summer: Key Tasks and Activities</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Watering:Monitor soil moisture and water deeply and regularly,
+                        especially during hot and dry periods.</li>
+                    <li class="list-group-item">Weed control:Manage weeds through hand-pulling, mulching, or
+                        cultivation.</li>
+                    <li class="list-group-item">Pest and disease monitoring:Regularly inspect plants and take
+                        appropriate action.</li>
+                    <li class="list-group-item">Thinning and pruning:Manage plant spacing and promote airflow for
+                        better growth and disease prevention.</li>
+                    <li class="list-group-item">Fertilize as needed:Apply fertilizers based on specific crop
+                        requirements and soil tests.</li>
+                    <li class="list-group-item">Harvesting:Begin harvesting fruits, vegetables, and herbs as they
+                        mature.</li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h2>Helpful Tips and Tricks</h2>
+                <ul>
+                    <li>Use shade cloths or row covers to protect sensitive crops from excessive sunlight.</li>
+                    <li>Group plants with similar water needs to optimize irrigation practices.</li>
+                    <li>Mulch heavily around plants to retain moisture, suppress weeds, and regulate soil temperature.
+                    </li>
+                    <encourage crop rotation to prevent nutrient depletion and reduce pest and disease problems.</li>
+                        <li>Harvest fruits and vegetables at their peak ripeness for optimal flavor and quality.</li>
+                        <li>Keep detailed records of harvest dates, yields, and any pest or disease issues.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Resource Links</h2>
+                <ul>
+                    <li><a href="https://www.extension.org/irrigation_mgmt/mgm.html">Irrigation Management Guide</a>
+                    </li>
+                    <li><a href="https://www.pestworld.org/pest-control/organic-pest-control/">Organic Pest Control
+                            Methods</a></li>
+                    <li><a
+                            href="https://www.nifa.usda.gov/publication/agricultural-research-service-ars-harvesting-handling-and-storage-horticultural-crops">Harvesting
+                            and Handling of Horticultural Crops</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+
+    </section>
+
+    <hr>
+
+    <section id="fall" name="fall">
+        <div class="container mt-5">
+
+            <div
+                class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                <h1>Fall</h1>
+                <img src="../beta-main/images/fall-icon.png" alt="" height="60px">
+            </div>
+
+            <p>Welcome, farmers! This section provides helpful tips and resources for optimizing your farm throughout
+                the
+                year. Here's a specific focus on fall activities.</p>
+
+            <section class="mb-5">
+                <h2>Fall: Key Tasks and Activities</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Harvesting:Continue harvesting remaining fruits and vegetables.</li>
+                    <li class="list-group-item">Curing and storing crops: Properly cure and store harvested crops for
+                        later use.</li>
+                    <li class="list-group-item">Planting cool-season crops: Plant vegetables that thrive in cooler
+                        temperatures.</li>
+                    <li class="list-group-item">Soil preparation: Amend and prepare soil for winter or spring
+                        planting.</li>
+                    <li class="list-group-item">Composting: Add leftover plant materials and food scraps to your
+                        compost pile.</li>
+                    <li class="list-group-item">Tool and equipment maintenance: Clean, repair, and store tools and
+                        equipment for the winter.</li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h2>Helpful Tips and Tricks</h2>
+                <ul>
+                    <li>Harvest fruits and vegetables at their peak ripeness for optimal flavor and storage potential.
+                    </li>
+                    <li>Properly cure crops like onions, garlic, and squash to improve their storage life.</li>
+                    <li>Choose cool-season crops like kale, lettuce, and turnips for fall planting.</li>
+                    <li>Amend soil based on soil test results to ensure proper nutrients for future plantings.</li>
+                    <li>Composting helps reduce waste and create nutrient-rich fertilizer for your soil.</li>
+                    <li>Maintaining tools and equipment extends their lifespan and ensures they are ready for next
+                        season.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Resource Links</h2>
+                <ul>
+                    <li><a
+                            href="https://www.extension.org/food-and-nutrition/food-preservation/drying-and-curing-fruits-and-vegetables">Drying
+                            and Curing Fruits and Vegetables</a></li>
+                    <li><a href="https://www.nifa.usda.gov/publication/soil-testing-and-plant-analysis">Soil Testing and
+                            Plant Analysis</a></li>
+                    <li><a href="https://www.epa.gov/composting/composting-home">Composting at Home</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+
+    </section>
+
+    <hr>
+
+    <section id="winter" name="winter">
+
+        <div class="container mt-5">
+            <div
+                class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                <h1>Winter</h1>
+                <img src="../beta-main/images/winter-icon.png" alt="" height="60px">
+            </div>
+
+            <p>Welcome, farmers! This section provides helpful tips and resources for optimizing your farm throughout
+                the
+                year. Here's a specific focus on winter activities.</p>
+
+            <section class="mb-5">
+                <h2>Winter: Key Tasks and Activities</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Planning and seed selection: Choose and order seeds for the upcoming
+                        spring season.</li>
+                    <li class="list-group-item">Greenhouse maintenance: Prepare and maintain greenhouses or indoor
+                        growing spaces.</li>
+                    <li class="list-group-item">Soil testing and amendments: Take soil samples and amend based on test
+                        results for optimal spring planting.</li>
+                    <li class="list-group-item">Tool and equipment maintenance: Perform thorough maintenance and
+                        repairs on tools and equipment.</li>
+                    <li class="list-group-item">Record keeping and analysis: Review past season's records and analyze
+                        successes and challenges.</li>
+                    <li class="list-group-item">Attend educational workshops and events: Stay updated on new farming
+                        techniques and industry trends.</li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h2>Helpful Tips and Tricks</h2>
+                <ul>
+                    <li>Order seeds early, especially for popular varieties, to avoid stockouts.</li>
+                    <li>Clean and disinfect your greenhouse to prevent the spread of diseases.</li>
+                    <li>Consider cover cropping to improve soil fertility and suppress weeds.</li>
+                    <li>Sharpen tools and lubricate moving parts to ensure smooth operation in the spring.</li>
+                    <li>Analyze your records to identify areas for improvement and plan for future success.</li>
+                    <li>Network with other farmers and attend workshops to gain new knowledge and stay connected.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Resource Links</h2>
+                <ul>
+                    <li><a href="https://www.seedsavers.org/seed-selection">Seed Selection Guide</a></li>
+                    <li><a href="https://www.nifa.usda.gov/publication/greenhouse-management">Greenhouse Management
+                            Guide</a></li>
+                    <li><a href="https://extension.colostate.edu/topics/soil-testing">Soil Testing Information</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+
+    </section>
+
+</body>
+
+</html>
